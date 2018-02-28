@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Login</title>
+  <style>
+  header, footer {
+    padding: 1em;
+    color: black;
+    background-color: #f0f0f0;
+    clear: left;
+    text-align: center;
+    width: 500px;
+
+  }
+
+  .bg{
+    /*background-image: url("/static/admin/img/bg.jpg");*/
+    background-color: black;
+  }
+
+  </style>
+</head>
+
+<body class="bg">
+
+<header >
+<h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+</header>
+
+
+</body>
+</html>

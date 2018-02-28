@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RentCar</title>
+    <style>
+    header, footer {
+      padding: 1em;
+    color: black;
+    background-color: #f0f0f0;
+    clear: left;
+    text-align: center;
+    width: 500px;
+    }
+    </style>
+  </head>
+  <body body style="background-color:gray">
+  	<header>
+<h1>Car</h1>
+<ul>
+{% for article in object_list %}
+    <li> <a href="/rentcar"> {{ article.model }}</a></li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+</header>
+</body>
